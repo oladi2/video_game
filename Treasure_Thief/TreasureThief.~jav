@@ -1,0 +1,48 @@
+package Treasure_Thief;
+
+import java.awt.*;
+import java.awt.event.*;
+import java.applet.*;
+import javax.swing.*;
+
+public class TreasureThief extends JApplet {
+  boolean isStandalone = false;
+
+  //Construct the applet
+  public TreasureThief() {
+  }
+
+  //Initialize the applet
+  public void init() {
+    try  {
+      jbInit();
+    }
+    catch(Exception e)  {
+      e.printStackTrace();
+    }
+  }
+
+  //Component initialization
+  private void jbInit() throws Exception {
+    this.setSize(new Dimension(400,300));
+  }
+
+  //Get Applet information
+  public String getAppletInfo() {
+    return "Applet Information";
+  }
+
+  //Get parameter info
+  public String[][] getParameterInfo() {
+    return null;
+  }
+  // static initializer for setting look & feel
+  static {
+    try {
+      UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+      //UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
+    }
+    catch (Exception e) {}
+  }
+
+} 
